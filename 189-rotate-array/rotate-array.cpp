@@ -4,6 +4,8 @@ public:
         int n = nums.size();
         k = k % n;
 
-        std::rotate(nums.begin(), nums.end() - k, nums.end());
+        reverse(nums.begin(), nums.end());
+        reverse(nums.begin(), nums.begin() + k );
+        reverse(nums.begin() + k, nums.end());
     }
 };
